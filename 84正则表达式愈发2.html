@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /* 
+        检查一个字符串中是否含有.
+         - .表示除了换行符和行结束符外的任意字符!!!
+         - 在正则表达式中需要使用\作为转义字符来检查.
+            \.表示.
+            \\表示\
+
+        注意:在使用构造函数时,由于它的参数是一个字符串,而\在字符串中是转义字符
+            如果要使用\则需要使用\\来转义
+    */
+    // var reg = /./;
+    // console.log(reg.test("abcd"));//true
+    // var reg = /\./;
+    // console.log(reg.test("abcd"));//false
+
+    // 检查字符串中是否有\
+    // var reg = /\\/;
+    // console.log(reg.test("abcd\\"));
+
+    /* 
+        \w  - 任意单词字符(字母,数字和_) [A-z0-9_]
+        \W  - 任意非单词字符 [^A-z0-9_]
+        \d  - 任意数字 [0-9]
+        \D  - 除了数字 [^0-9]
+        \s  - 空格 
+        \S  - 除了空格
+        \b  - 单词边界
+        \B  - 除了单词边界
+    */
+    
+    /* 
+        创建一个正则表达式检查一个字符串中是否含有单词child
+    */
+    var reg = /\bchild\b/;
+    // console.log(reg.test("hello children"));
+
+    // 接收一个用户的输入
+    // var str = prompt("请输入用户名:")
+    // 
+
+    var str = "     adm  in          ";
+    // 去掉字符串中所有的空格
+    // 使用空串来替换空格
+    // str = str.replace(/\s/g,"");
+
+
+    // 去除字符串前面的多个空格
+    // str = str.replace(/^\s*/,"");
+    // 去除字符串后面的多个空格
+    // str = str.replace(/\s*$/,"");
+
+    // 去除开头和结尾的空格
+    str = str.replace(/^\s*|\s*$/g,"");
+    console.log(str);
+
+    </script>
+</body>
+</html>

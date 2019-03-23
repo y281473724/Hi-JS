@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    /* 
+        原型prototype
+            我们创建的每一个函数,解析器都会向函数中添加属性prototype
+                这个属性对应着一个对象,这个对象就是我们所谓的原型对象
+            如果函数作为普通函数调用prototype没有任何作用
+            当函数以构造函数的形式调用时,它所创建的对象中都会有一个隐含属性
+                指向构造函数的原型对象
+                可以通过__proto__来访问该属性
+
+            原型对象就相当于公共区域,所有同一个类的实例都可以访问原型对象
+                我们可以将对象中共有的内容,统一设置到原型对象中
+
+            当我们访问对象的属性或方法,它会先在对象自身中寻找
+                如果有则直接使用
+                如果没有,则会去原型对象中寻找
+
+            以后我们创建构造函数时,可以将这些对象共有的属性和方法,
+                统一添加到构造函数的原型对象中
+                这样不用再分别为每一个对象添加,也不会影响全局作用域
+                就可以让每一个对象都可以使用这些属性和方法
+
+            使用in检查对象中是否有某个属性时,如果对象中没有单原型中有,也会返回true
+            可以使用对象的hasOwnProperty()来检查对象自身中是否有该属性
+            使用该方法,只有当对象自身中含有属性时,才会返回true
+                hasOwnProperty()方法在原型的原型中
+
+            原型对象也是对象,所以它也有原型
+                当我们使用一个对象的属性或方法时,会先在自身中寻找
+                如果没有,则在原型对象中寻找
+                如果原型对象中也没有,则去原型的原型中去找
+                直到找到Object对象的原型
+                Object对象的原型没有原型,如果Object的原型中还是找不到
+                    则返回Undefined
+                语法:
+                    对象.__proto__.__proto__
+
+    */
+            function Person(name, age, gender){
+                    this.name = name;
+                    this.age = age;
+                    this.gender = gender;
+            };
+            Person.prototype.sayName= function(){
+                    alert("Hello大家好,我是"+this.name);
+                };
+    
+                var per = new Person("孙悟空", 18, "男");
+                
+                console.log(per.sayName());
+
+        
+    
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

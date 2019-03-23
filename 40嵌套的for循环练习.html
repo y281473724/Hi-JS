@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    //打印99乘法表
+    for(var i = 1;i<10;i++){
+        for(var j=1;j<=i;j++){
+            document.write("<span>"+j+'X'+i+'='+i*j+"</span>");
+        }
+        document.write('<br />');
+    }
+    
+    //打印1-100之间所有的质数
+ 
+    for(var i=2;i<=100;i++){
+        var flag = true;
+        for(var j=2;j<i;j++){
+            if(i%j == 0){
+                flag =false;
+            }
+        }
+        if(flag == true){
+            document.write(i+'<br />');
+        }
+    }
+    
+    
+    </script>
+    <style>
+        body{
+            width:2000px;
+        }
+        span{
+            display: inline-block;
+            width:80px;
+        }
+    
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

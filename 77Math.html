@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /* 
+        Math
+         - Math和其他对象不同,它不是构造函数
+            它属于一个工具类,不用创建对象
+            它封装了数学运算相关的属性和方法
+    */
+
+    // abs()返回一个数的绝对值
+
+    var a = Math.abs(-12)
+    
+    // Math.ceil()对一个数向上取整,小数位只要有值就进1
+    // Math.floor()对一个数向下取整,小数位被自己舍掉
+    // Math.round()对一个数四舍五入取整
+
+    // console.log(Math.round(1.5));
+    
+    /* 
+        Math.random()
+         - 可以用来生成一个(0,1)之间的随机数
+         - 生成一个[0,x]之间的随机数:
+            Math.round(Math.random()*x)
+
+         - 生成一个[x,y]之间的随机数:
+            Math.round(Math.random()*(y-x)+x)
+    */
+    for(var i=0; i<30; i++){
+        console.log(Math.round(Math.random()*100));
+    }
+    
+    /* 
+        Math.max(),Math.min():
+         - max(x,y,z,...,n),返回 x,y,z,...,n 中的最高值
+         - min(x,y,z,...,n),返回 x,y,z,...,n中的最低值
+    */
+
+    /* 
+        Math.pow(),Math.sqrt():
+         - pow(x,y),返回 x 的 y 次幂
+         - sqrt(x),返回数的平方根
+    */
+
+    </script>
+</body>
+</html>

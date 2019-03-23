@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+    //质数练习改进
+    //测试如下程序的性能,在程序执行时,开启计时器
+    //console.time("计时器的名字")可以用来开启一个计时器
+
+    console.time("test");
+
+       //打印1-100之间所有的质数
+ 
+       for(var i=2;i<=100000;i++){
+        var flag = true;
+
+        //Math.sqrt();可以对一个数进行开方
+        for(var j=2;j <= Math.sqrt(i);j++){
+        //for(var j=2;j < i;j++){
+            if(i%j == 0){
+                flag =false;
+               
+                break;
+               
+                
+            }
+        }
+        if(flag == true){
+            //document.write(i+'<br />');
+        }
+    }
+
+    //终止计时器
+    //console.timeEnd()用来终止一个计时器,需要一个计时器的名字作为参数.
+    console.timeEnd("test");
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

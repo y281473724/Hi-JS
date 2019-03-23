@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    /*
+    相等运算符：==
+        - 用来比较两个值是否相等
+        - 如果相等会返回true，否则返回false
+        - 使用'=='来做相等运算
+            - 当时用'=='来比较两个值时，如果类型不同，
+                则会转换成相同类型，再进行比较
+    
+    不相等：!=
+        - 不相等用来判断两个值是否不相等
+        - 如果不相等则返回true，否则返回false
+        - 不相等也会对变量进行自动的类型转换，再进行比较
+
+    全等：===
+        - 判断两个值是否全等，判断两个值是否相等
+        - 特别的是它不会进行类型转换
+        - 如果两个值类型不同，则直接返回false
+    
+    不全等：!==
+        - 用来判断两个值是否不全等，和不等类似
+        - 不同的是它不会进行类型转换
+        - 如果两个值类型不同，直接返回true
+    */
+    //document.write(1=='1');//true
+    //document.write(true == '1');//true
+    //document.write(true == 'hello');//false
+    //document.write(null == '0');//false
+
+    /*undefined衍生自null
+            所以这两个值做相等判断时，会返回true*/
+
+    //document.write(null == undefined);//true
+    //document.write(null === undefined);//false
+
+    //NaN不和任何值相等，包括它本身
+    
+    //document.write(NaN == NaN);//false
+
+    /*可以通过isNaN()函数来判断一个值是否是NaN
+        如果该值是NaN则返回true，否则返回false*/
+    
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

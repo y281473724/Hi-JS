@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    //1.
+    var a = 123;
+    function fun(){
+        alert(a);//函数中没有声明变量a
+    }
+    fun();
+    //函数中没有声明变量a,所以会在全局作用域中寻找,最终输出是123
+
+    //2.
+    var a = 123;
+    function fun(){
+        alert(a);
+        var a = 456;//a是函数作用域中的变量,在函数中代码执行前声明,但不会提前赋值
+    }
+    fun();//输出Undefined
+    alert(a);//输出123
+
+    //3.
+    var a = 123;
+    function fun(){
+        alert(a);
+        a = 456;//没有var关键字,此时a是全局变量
+    }
+    fun();//输出123
+    alert(a);//输出456
+
+    //4.
+    var a = 123;
+    function fun(a){ //有形参a,相当于声明了函数作用域中的变量a
+        alert(a);
+        a = 456;//a是函数作用域中的变量,没有提前赋值
+    }
+    fun();//Undefined
+    alert(a);//输出123
+
+    //5.
+    var a = 123;
+    function fun(a){ //有形参a,相当于声明了函数作用域中的变量a
+        alert(a);
+        a = 456;//修改的是局部的a
+    }
+    fun(123);//实参123传给形参a,输出123
+    alert(a);//全局的a没有变,输出123
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

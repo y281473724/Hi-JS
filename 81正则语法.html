@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    /* 
+        可以使用字面量来创建正则表达式
+         - 语法:
+            var 变量 = /正则表达式/匹配模式
+
+         - 使用字面量的创建方式更简单.
+         - 使用构造函数的创建方式更灵活.
+    
+    */
+
+    // var reg = new RegExp("a","i");
+    // var reg = /a/i;
+    // console.log(reg.test("ABC"));
+    
+    /* 
+        使用|表示或的意思
+        []里的内容也是或的关系
+            [ab] == a|b
+        [a-z]表示任意的小写字母
+        [A-Z]表示任意的大写字母
+        [A-z]表示任意字母
+        [0-9]表示任意数字
+        [^ ]符号^表示非,除了..之外
+            [^0-9]除了数字之外
+        
+    */
+    // var reg = /a|b/;
+    // var reg = /[ab]/;
+    // var reg = /[a-z]/i;
+    // var reg = /[A-z]/;
+    // var reg = /a[bcd]e/;
+    
+
+
+    </script>
+</body>
+</html>

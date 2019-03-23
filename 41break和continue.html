@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    /*
+        break关键字可以用来退出switch或循环语句(只能用于loop和switch)
+            - 不能在if语句中使用break和continue!!!
+            执行break,会立即终止离它最近的那个循环语句
+
+        continue关键字可以用来结束当次循环
+            continue同样默认对离它最近的循环起作用
+    */  
+
+    /*
+        可以为循环语句创建一个label,来标识当前的循环
+            label:循环语句
+            使用break语句时,可以在break后跟着一个label
+                这时break会终止指定的循环,而不是最近的
+    */
+    
+    /*
+        outer:
+        for(var i=0;i<5;i++){
+            console.log("@外层循环"+i);
+            for(var j =0;j<5;j++){
+                break outer;
+                console.log("内层循环"+j)
+            }
+        }
+    */console
+
+
+    //质数练习补充
+    //测试如下程序的性能,在程序执行时,开启计时器
+    //console.time("计时器的名字")可以用来开启一个计时器
+
+    console.time("test");
+
+       //打印1-100之间所有的质数
+ 
+       for(var i=2;i<=10000;i++){
+        var flag = true;
+        for(var j=2;j<i;j++){
+            if(i%j == 0){
+                flag =false;
+                //不加break 1935ms
+                break;
+                //加break 650ms
+                
+            }
+        }
+        if(flag == true){
+            document.write(i+'<br />');
+        }
+    }
+
+    //终止计时器
+    //console.timeEnd()用来终止一个计时器,需要一个计时器的名字作为参数.
+    console.timeEnd("test");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

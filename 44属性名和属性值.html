@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    /*
+        向对象中添加属性
+        一、属性名
+            - 对象的属性名不强制要求遵守标识符的规范
+                什么都可以使用
+            - 但是我们还是尽量按照标识符的规范去做
+            - 如果我们使用特殊的属性名,不能采用.的方式来操作
+                需要使用另一种方式:
+                    语法:对象['属性名'] = 属性值
+            
+            !使用[]这种方式去操作属性,更加灵活
+                在[]中可以直接传递一个变量,这样变量值是多少就会读取哪个属性
+    */
+    
+        var obj = new Object();
+
+        obj.name = '孙悟空';    
+        obj.var = 'hello';//取一个var的属性名
+
+        obj['123'] = 789;//取一个123的属性名
+
+        var n = '123';//创建一个值为'123'的变量
+
+        console.log(obj[n]);
+        console.log(obj.var+obj['123']);
+
+    /*
+        二、属性值
+            - JS对象的属性值,可以是任意的数据类型
+                ! 甚至也可以是一个对象  
+    */
+    
+    //创建一个新对象
+    var obj2 = new Object();
+    obj2.name = '猪八戒';
+
+    //将obj2设置为obj的属性
+    obj.test = obj2;
+
+    console.log(obj.test.name);
+
+    /*
+        in运算符
+            - 通过该运算符可以检查一个对象中是否有指定的属性
+                如果有则返回true,否则返回false
+            - 语法
+                '属性名' in 对象
+
+    */
+        //检查obj中是否有某个属性
+        console.log('test' in obj);
+        console.log('test2' in obj);
+
+    </script>
+
+
+
+
+
+</head>
+<body>
+    
+</body>
+</html>

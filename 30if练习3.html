@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    //prompt()函数的返回值是String
+    var num1 = +prompt("请输入第一个整数:");
+    var num2 = +prompt("请输入第二个整数:");
+    var num3 = +prompt("请输入第三个整数:");
+    var a;
+    if (num1 > num2){
+        a = num1;
+        num1 = num2;
+        num2 =a;
+    }
+    if (num2 > num3){
+        a = num2;
+        num2 = num3;
+        num3 = a;
+    }
+    if (num1 > num2){
+        a = num1;
+        num1 = num2;
+        num2 = a;
+    }
+    alert(num1+','+ num2 +','+num3)
+ 
+
+
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
